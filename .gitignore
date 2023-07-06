@@ -19,3 +19,9 @@
 
 # Go workspace file
 go.work
+
+keygen.db
+match_eth_pattern/*.txt
+match_eth_address/*.txt
+match_btc_pattern/*.txt
+match_btc_address/*.txt
