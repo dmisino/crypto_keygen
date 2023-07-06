@@ -63,6 +63,7 @@ Using numbers as letters, you could use the following letters when creating a va
 The odds of generating an address, and having that address match another specific address are ridiculously small.
 
 For BTC: 1 in 2^160
+
 For ETH: 1 in 2^256
 
 Even if for example, you had a list of 1 million BTC addresses you were trying to find, and you managed to generate 1 trillion addresses per day to check for a match. And say you did that every day for 50 years. What would the odds be of ever finding the private keys for one of your target addresses? The math gets a little messy, but the answer in short is zero. From any practical standpoint, the odds are still effectively zero.
@@ -72,6 +73,7 @@ Even if for example, you had a list of 1 million BTC addresses you were trying t
 An ethereum address is "0x" + exactly 40 characters. Try to discover the private key for these addresses:
 
 0x3141592653589793238462643383279502884197
+
 0x1618033988749894848204586834365638117720
 
 Those addresses would be perfect representations of Pi and The Golden Ratio, and might be the ultimate vanity addresses. The chances of ANYONE ever finding those, without some encryption breaking advance in technology, are still basically zero.
