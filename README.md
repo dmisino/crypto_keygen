@@ -48,6 +48,18 @@ crypto_keygen eth 50000
 
 The slowest part of trying to brute force match existing addresses or in creating new vanity addresses is the act of creating the new addresses. Once created, the comparison can be fairly quick. To speed up the process of generating addresses, multiple threads are spawned. A .env file setting defaults this to 8 worker threads, though the best number for your system will depend on a number of factors, such as total CPU cores available. You can play with this setting to try and achieve the fastest processing possible.
 
+## Chance of getting an address collision
+
+The odds of generating an address, and having that address match another address that was already previously generated are ridiculously small.
+
+For BTC: 1 in 2^160
+
+For ETH: 1 in 2^256
+
+From any practical standpoint, the odds are effectively zero, even if you could leverage all of the worlds computing power and run it for your entire lifetime.
+
+For a good writeup describing the math invloved and the possibility of finding a bitcoin address collision, see [The Birthday Paradox](https://download.wpsoftware.net/bitcoin-birthday.pdf), written way back in 2013.
+
 ## Creating match lists
 
 The lists you create to try and match will depend on what you are trying to accomplish. Here is some info that might be useful.
@@ -58,26 +70,16 @@ Ethereum addresses can have any number 0-9, or the letters a-f, since they are h
 
 Using numbers as letters, you could use the following letters when creating a vanity word or phrase: abcdefois (o,i and s represented by 0, 1 and 5 respectively). Find words containing specific letters in English, French, German or Spanish: https://www.dcode.fr/words-containing
 
-### Chance of getting an address collision
-
-The odds of generating an address, and having that address match another specific address are ridiculously small.
-
-For BTC: 1 in 2^160
-
-For ETH: 1 in 2^256
-
-Even if for example, you had a list of 1 million BTC addresses you were trying to find, and you managed to generate 1 trillion addresses per day to check for a match. And say you did that every day for 50 years. What would the odds be of ever finding the private keys for one of your target addresses? The math gets a little messy, but the answer in short is zero. From any practical standpoint, the odds are still effectively zero.
-
 ### ETH addresses
 
-An ethereum address is "0x" + exactly 40 characters. Try to discover the private key for these addresses:
+An ethereum address is "0x" + exactly 40 characters. If you want to try and find the private key for a specific address, consider these addresses:
 
 0x3141592653589793238462643383279502884197
 
 0x1618033988749894848204586834365638117720
 
-Those addresses would be perfect representations of Pi and The Golden Ratio, and might be the ultimate vanity addresses. The chances of ANYONE ever finding those, without some encryption breaking advance in technology, are still basically zero.
+Those would be perfect representations of Pi and The Golden Ratio, and might be the ultimate vanity addresses. Of course, the chances of ANYONE ever finding those, without some encryption breaking advance in technology, are still basically zero.
 
 ### BTC addresses
 
-Download a text file with all BTC addresses that have any balance (over 47 million addresses currently): http://addresses.loyce.club/ 
+Download a text file with all BTC addresses that have any balance (over 47 million addresses as of July 2023): http://addresses.loyce.club/ 
